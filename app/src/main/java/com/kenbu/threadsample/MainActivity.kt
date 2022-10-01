@@ -19,8 +19,7 @@ class MainActivity : AppCompatActivity() {
         Log.d("Patika", "Start")
         /*
          * While Blocks Coroutines, after completing loop Coroutines will start.
-         * If loop is while (true) infinite it will block Ui but IO thread will continue running.
-         * Therefore we cant reach Main Thread.
+         * If loop is while (true) infinite it will block Ui therefore we cant reach Main Thread.
          */
         var counter = 0
         while (true) {
@@ -40,12 +39,3 @@ class MainActivity : AppCompatActivity() {
         return "Remote Data"
     }
 }
-//        CoroutineScope(Dispatchers.IO).launch {
-//            launch (Dispatchers.Default){
-//                println("Dispatchers.Default")
-//                withContext(Dispatchers.IO){
-//                    delay(3000)
-//                    println("Dispatchers.IO")
-//                }
-//            }
-//        }
